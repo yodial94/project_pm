@@ -4,3 +4,17 @@
     background-color: #f7f7f7;
   }
 }
+
+#tasks-list {
+  list-style: none;
+}
+
+.task-status {
+  .grip {
+    font-size: 1.1rem;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
