@@ -4,17 +4,13 @@
     <title>ProjectPm</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <script src="https://kit.fontawesome.com/2ec2a30cc1.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    <%= render 'layouts/libraries' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="bg-light">
-    <div class="container pt-5">
+    <div class="container pt-5 pb-5">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>
