@@ -9,6 +9,12 @@ class Task < ApplicationRecord
   	['Complete', 	'complete']
   ]
 
+  PRIORITY_OPTION = [
+    ['Low', 'low'],
+    ['Medium', 'medium'],
+    ['Crictical',  'crictical']
+  ]
+
   def color_class
     case status
     when 'not-started'
@@ -35,12 +41,14 @@ class Task < ApplicationRecord
     status == 'complete'
   end
 
-   def in_progress?
+  def in_progress?
     status == 'in-progress'
   end
 
-   def not_started?
+  def not_started?
     status == 'not-started'
   end
+
+  
 
 end
