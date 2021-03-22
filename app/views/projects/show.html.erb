@@ -44,6 +44,7 @@
                   <div class='task-status'>
                     <i class="fas fa-grip-vertical grip text-secondary mr-1"></i>
                     <span class="badge badge-<%= task.color_class %> mb-3"><%= task.status %></span>
+                     <span class="badge badge-primary mb-3"><%= task.priority %></span>
                   </div>
                   <div>
                     <!--div class="dropdown float-left">
@@ -68,6 +69,9 @@
                   <span><%= task.name %></span>
                 </h5>
                 <p><%= task.description %></p>
+                <small>
+                  <p class='text-danger'>exp.<%= task.deadline %></p>
+                </small>
               </div>
             </div>
           </li>
