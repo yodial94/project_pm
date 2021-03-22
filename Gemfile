@@ -23,6 +23,7 @@ group :development do
   gem 'listen',                '3.2.1'
   gem 'spring',                '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'pry-rails'
 end
 
 group :test do
@@ -40,3 +41,5 @@ group :production do
   gem 'pg', '1.2.3'
 end
 
+
+gem "stimulus_reflex", "~> 3.4"
