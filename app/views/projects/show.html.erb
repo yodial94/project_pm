@@ -4,8 +4,12 @@
      <h2 class='card-title d-flex justify-content-between mb-4'>
        <span><%= @project.name %></span>
       <div>
-        <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-light' %>
-        <%= link_to 'Destroy', @project, method: :delete, class: 'btn btn-secondary', data: { confirm: 'Are you sure?' } %>
+        <%= link_to edit_project_path(@project), class: 'btn btn-light btn-sm' do %>
+        <i class='far fa-edit'></i>
+        <% end %>
+        <%= link_to @peoject, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark btn-sm' do %>
+        <i class='fas fa-trash'></i>
+        <% end%>
       </div>
      </h2>
 
@@ -47,16 +51,6 @@
                      <span class="badge badge-primary mb-3"><%= task.priority %></span>
                   </div>
                   <div>
-                    <!--div class="dropdown float-left">
-                      <button class="btn btn-sm mr-1 btn-outline-<%= task.color_class %> dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%= task.readable_status %>
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <!% Task::STATUS_OPTION.each do |status| %>
-                          <a class="dropdown-item" href="#"><!%= status[0] %></a>
-                        <!% end %>
-                      </div>
-                    </div-->
                     <%= link_to edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' do %>
                       <i class='far fa-edit'></i>
                     <% end %>
