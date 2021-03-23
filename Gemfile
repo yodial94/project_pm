@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '3.0.0'
 
 gem 'rails',      '6.1.3'
 gem 'bootstrap-sass', '3.4.1'
@@ -24,6 +24,7 @@ group :development do
   gem 'listen',                '3.2.1'
   gem 'spring',                '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'pry-rails'
 end
 
 group :test do
